@@ -1,7 +1,7 @@
 import { getProductDetail } from './data.js'
 
 export const paintCard = ({id, title, price, description, category, image}, detail) => {
-    
+
     const cardsContainer = document.getElementById('cards-container')
     // Creo dinámicamente todos los nodos necesarios para pintar mis tarjetas de productos
     const card = document.createElement('div')
@@ -30,6 +30,7 @@ export const paintCard = ({id, title, price, description, category, image}, deta
         // Borrar todos los nodos dentro de cards-container
         clearCards()
         // Hacer una petición al servidor para obtener el detalle de un producto determinado
+        //...
         const detail = await getProductDetail(id)
         // Pintar el detalle del producto clickeado
         detail.forEach((product)=> paintCard(product, true))
