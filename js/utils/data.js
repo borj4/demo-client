@@ -21,16 +21,5 @@ export const getMyProducts =  () =>{
 // petición que envía un producto nuevo de acuerdo a los datos completados en el formulario /products
 export const postNewProduct =  (product) => {
 
-   let options = {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-            },
-        body: JSON.stringify(product) 
-   } 
-   let response = await fetch(`${BASE_URL}/products`, options)
-   let data = await response.json()
-   console.log(data)
-   return data
 
 }
