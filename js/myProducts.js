@@ -13,7 +13,7 @@ document.getElementById("new-product-btn").addEventListener("click", async (e)=>
         data[input.name] = input.value
     }
     console.log("data recogida del formulario", data)
-     const postResponse = await postNewProduct(data);
+     const response = await postNewProduct(data);
 
      // a continuación hay que invocar nuevamente la función que pide los productos y la que los pinta
      
